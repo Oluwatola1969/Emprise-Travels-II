@@ -136,8 +136,9 @@ img{
     background-size: cover;
     padding-top: 13rem;
     color: #fff;
-    height: 50vh;
+    height: auto;
     min-height: 600px;
+    width: 100%;
 }
 
 
@@ -235,8 +236,112 @@ img{
 
 .heroCard .prt4 img{
     display: block;
-    place-items: center;
+    place-items: center;  
+}
+
+
+@media (max-width: 775px){
+
+    html{
+        font-size: 50%;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    .navLinks{
+        background: grey;
+        position: absolute;
+        width: 50%;
+        height: 100vh;
+        right: -100%;
+        top: 0;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        font-size: 2rem;
+
+        transition: all .5s ease-in-out;
+    }
+
+    .navLinks.isOpen{
+        right: 0;
+    }
     
+    
+    .navRight{
+        flex-direction: column;
+        flex:1;
+        width: 100%;
+    }
+
+    .navRight ul{
+        width: 100%;
+        flex-basis: 100%;
+        display: flex;
+        border-bottom: #000;
+    }
+
+    .navRight li{
+        display: flex;
+        flex-basis: 100%;
+    }
+
+    .navRight a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 100%;
+    }
+
+    .navRight a:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav .logo{
+        display: block;
+        text-align: left;
+    }
+
     
 
+    .navToggle{
+        position: absolute;
+        padding: 1em;
+        top: 2rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+
+    .hambuger, .hambuger::before, .hambuger::after{
+        content: '';
+        display: block;
+        width: 2em;
+        height: 3px;
+        background-color: #E81A46;
+        transition: all .25s ease-in;
+    }
+
+
+    .hambuger::before{
+        transform: translateY(-6px);
+    }
+    .hambuger::after{
+        transform: translateY(3px);
+    }
+    
+    .hambuger.isOpen{
+        transform: rotate(45deg);
+    }
+    
+    .hambuger.isOpen::after{
+        transform: rotate(-90deg) translateX(3px);
+        
+
+    }
+    .hambuger.isOpen::before{
+        opacity: 0;
+
+    }
 }
