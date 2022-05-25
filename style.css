@@ -248,12 +248,12 @@ img{
 }
 
 .category .container{
-    width: 1400px;
-    overflow-y: visible;
+    overflow-x: visible;
 }
 
 .categoryContent{
     margin-bottom: 4rem;
+    flex-wrap: wrap;
 }
 
 .categoryContent h4{
@@ -267,17 +267,17 @@ img{
 .categoryCards{
     display: flex;
     gap: 1.5rem;
-    /* background-color: yellow; */
     width: max-content;
 }
 
 .categoryCards .cards{
     padding: 3rem;
-    flex: 1;
+    flex-basis: 100%;
+    flex-flow: wrap;
     width: 376px;
-    height: 293px;
+    min-height: 293px;
     background-color: #fff;
-    box-shadow: 0px 2px 4px rgba(14, 86, 124, 0.16);
+    box-shadow: 2px 2px 4px 3px rgba(14, 86, 124, 0.16);
     border-radius: 8px;
     display: flex;
 }
@@ -313,6 +313,14 @@ img{
     body{
         margin: 0;
         padding: 0;
+    }
+
+    .container{
+        padding: 0 3rem;
+    }
+
+    .nav{
+        display: block;
     }
 
     .navLinks{
@@ -375,6 +383,7 @@ img{
         top: 2rem;
         right: 1rem;
         cursor: pointer;
+        margin-right: 2rem;
     }
 
     .hambuger, .hambuger::before, .hambuger::after{
@@ -406,5 +415,17 @@ img{
     .hambuger.isOpen::before{
         opacity: 0;
 
+    }
+
+
+    /* query category */
+
+    .category .container{
+        padding: 5rem;
+    }
+
+    .categoryCards .cards{
+        width: 193px;
+        min-height: 193px;
     }
 }
