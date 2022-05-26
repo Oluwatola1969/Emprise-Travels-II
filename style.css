@@ -37,6 +37,10 @@ img{
     max-width: 100%;
 }
 
+.card{
+    z-index: 1;
+}
+
 .flex{
     display: flex;
     justify-content: space-between;
@@ -58,6 +62,8 @@ img{
     position: fixed;
     background-color: #fff;
     padding-block: 1rem;
+    z-index: 2;
+    box-shadow: 0px 2px 4px rgba(14, 86, 124, 0.16);
 }
 
 .nav{
@@ -104,26 +110,28 @@ img{
 }
 
 .btn{
-    background-color: #E81A46;
-    display: inline-block;
-    padding: 0.5rem 1rem;
     border: 1px solid #E81A46;
     border-radius: 50px;
     transition: all .5s ease;
 }
 
-.btn:hover{
-    background-color: #fff;
+.btn--pry{
+    background-color: #E81A46 !important;
+}
+.btn--sec{
+    background: #fff !important;
+    border: 1px solid #E81A46;
+    color: #E81A46;
 }
 
-.btn--sec{
-    background: #fff;
-    border: 1px solid #E81A46;
-}
 
 .btn--sec:hover{
-    background-color: #E81A46;
+    background-color:  #E81A46 !important;
+    color: #fff !important;
 }
+
+
+
 
 
 
@@ -192,7 +200,7 @@ img{
     margin-block: 3rem;
 }
 
-.heroCard .card input{
+.heroCard .book input{
     display: inline-block;
     border: none;
     border-bottom: 1px solid #000;
@@ -209,16 +217,16 @@ img{
 .heroCard .prt3 input{
     width: 7ch;
 }
-.heroCard .card h4{
+.heroCard .book h4{
     text-transform: uppercase;
     
 }
 
-.heroCard .card label{
+.heroCard .book label{
     margin-left: .5rem;
 }
 
-.heroCard .card label img{
+.heroCard .book label img{
     width: 14px;
     height: 14px;
     margin: 0;
@@ -260,7 +268,7 @@ img{
     font-size: clamp(3rem, 5vw, 4rem);
 }
 
-.categoryContent .categoryArrow img{
+.categoryArrow img{
     width: 44px
 }
 
@@ -292,6 +300,48 @@ img{
 }
 
 
+
+/* trending section */
+
+.trending{
+    z-index: -1;
+    margin-top: 5rem;
+    position: relative;
+}
+
+.trendingContent{
+    margin-bottom: 3rem;
+}
+
+.trendingContent .Text h4{
+    font-size: clamp(3rem, 5vw, 4rem);
+}
+
+.trending .row{
+    width: max-content;
+}
+
+.trending .card{
+    border-radius: 20px;
+}
+
+.trending .row .card-title{
+    position: absolute;
+    top: 0;
+    left: 80%;
+}
+
+.medContent{
+    margin: 2rem 0;
+}
+
+.medContent h3, .medContent p{
+    line-height: 1rem;
+}
+
+.btmContent div p{
+    margin-right: 1rem !important;
+}
 
 
 
