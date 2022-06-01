@@ -42,6 +42,7 @@ img{
 }
 
 .flex{
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +51,10 @@ img{
 
 .container{
     max-width: 1100px;
+    height: auto;
     margin: 0 auto;
+    padding: 0 40px;
+    overflow: auto !important;
     
 }
 
@@ -219,7 +223,6 @@ img{
 }
 .heroCard .book h4{
     text-transform: uppercase;
-    
 }
 
 .heroCard .book label{
@@ -252,11 +255,11 @@ img{
 .category{
     width: 100%;
     padding-top: 5rem;
-    /* background-color: red; */
+    overflow-x: hidden !important;
 }
 
 .category .container{
-    overflow-x: visible;
+    overflow-x: hidden !important;
 }
 
 .categoryContent{
@@ -309,6 +312,10 @@ img{
     position: relative;
 }
 
+.trending .container{
+    max-width: 1400px !important;
+}
+
 .trendingContent{
     margin-bottom: 3rem;
 }
@@ -319,10 +326,12 @@ img{
 
 .trending .row{
     width: max-content;
+    overflow-x: hidden !important;
 }
 
 .trending .card{
-    border-radius: 20px;
+    overflow-x: hidden !important;
+    border-radius: 30px;
 }
 
 .trending .row .card-title{
@@ -343,9 +352,48 @@ img{
     margin-right: 1rem !important;
 }
 
+.trending .btn{
+    display: block;
+    background-color: #E81A46;
+}
+
+
+/* top destination */
+
+.destination{
+    width: 100%;
+    margin-top: 8rem;
+}
+
+.dText{
+    margin-block: 3rem;
+}
+
+.dText h2{
+    font-size: clamp(3rem, 5vw, 4rem);
+}
 
 
 
+/* best seller section */
+
+.bsGrid{
+
+}
+
+.bsCard{
+    background-color: red;
+
+}
+
+.destination .dItem{
+    background-image: url(images/amster.jpg);
+    width: 100% !important;
+    height: 324px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+}
 
 
 
@@ -468,6 +516,31 @@ img{
     }
 
 
+
+    /* query hero  */
+
+    .heroCard{
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .heroCard .book input{
+        display: block;
+        width:100% 
+    }
+
+    .heroCard .prt4{
+        display: block;
+        padding: 2rem;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        font-weight: bolder !important;
+    }
+
+
+
+
     /* query category */
 
     .category .container{
@@ -477,5 +550,17 @@ img{
     .categoryCards .cards{
         width: 193px;
         min-height: 193px;
+    }
+
+    /* query trending */
+        .trending .row{
+            width: auto;
+        }
+
+    /* query destination */
+
+    .dGridContainer{
+        display: flex;
+
     }
 }
